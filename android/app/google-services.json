@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "279120469775",
+    "project_id": "coleccion-app-de9bd",
+    "storage_bucket": "coleccion-app-de9bd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279120469775:android:0ae17f5f233961e134287a",
+        "android_client_info": {
+          "package_name": "com.example.coleccion_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ9aANPZnr7gCUjKCVCUY10QEBI2YFMhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
