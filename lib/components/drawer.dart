@@ -1,4 +1,5 @@
 import 'package:coleccion_app/features/auth/presentation/cubits/auth_cubit.dart';
+import 'package:coleccion_app/features/collections/presentation/collections_page.dart';
 import 'package:coleccion_app/features/profile/profile_page.dart';
 import 'package:coleccion_app/features/settings/presentation/settings_page.dart';
 import 'package:flutter/material.dart';
@@ -84,6 +85,21 @@ class MyDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const ProfilePage(),
+                  ),
+                );
+              },
+            ),
+
+            // profile tile
+            MyDrawerTile(
+              text: "Mis colecciones",
+              icon: Icons.catching_pokemon,
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CollectionsPage(),
                   ),
                 );
               },

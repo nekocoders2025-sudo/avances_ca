@@ -5,13 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'settings_tile.dart';
 
 /*
-
 SETTINGS PAGE
-
 --------------------------------------------------------------------------------
-
-- Apple requires that users can delete their account to be approved.
-
 */
 
 class SettingsPage extends StatefulWidget {
@@ -27,12 +22,12 @@ class _SettingsPageState extends State<SettingsPage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text("Delete Account?"),
+        title: const Text("Borrar Cuenta?"),
         actions: [
           // cancel button
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text("Cancel"),
+            child: const Text("Cancelar"),
           ),
 
           // yes button
@@ -41,7 +36,7 @@ class _SettingsPageState extends State<SettingsPage> {
               Navigator.pop(context);
               handleAccountDeletion();
             },
-            child: const Text("Yes"),
+            child: const Text("Aceptar"),
           ),
         ],
       ),
@@ -79,13 +74,13 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Settings"),
+        title: Text("Configuración"),
       ),
       body: Column(
         children: [
           // delete account
           MySettingsTile(
-            title: "Delete Account",
+            title: "Borrar Cuenta",
             action: IconButton(
               onPressed: confirmAccountDeletion,
               icon: const Icon(Icons.delete_forever),
@@ -94,7 +89,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
           // blocked users
           MySettingsTile(
-            title: "Blocked Users",
+            title: "Usuarios Bloqueados",
             action: IconButton(
               onPressed: () => Navigator.push(
                   context,

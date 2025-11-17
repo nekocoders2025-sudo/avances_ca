@@ -22,7 +22,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   // Tab controller
-  late final _tabController = TabController(length: 3, vsync: this);
+  late final _tabController = TabController(length: 1, vsync: this);
 
   // Cubits
   late final postCubit = context.read<PostCubit>();
@@ -92,12 +92,12 @@ class _HomePageState extends State<HomePage>
       case 0:
         currentCategory = "Favoritos";
         break;
-      case 1:
-        currentCategory = "Placeholder1";
-        break;
-      case 2:
-        currentCategory = "Placeholder2";
-        break;
+      //case 1:
+        //currentCategory = "Placeholder1";
+        //break;
+      //case 2:
+        //currentCategory = "Placeholder2";
+        //break;
       default:
         currentCategory = "Favoritos";
     }
@@ -201,7 +201,7 @@ class _HomePageState extends State<HomePage>
     // posts are empty..
     if (postsInThisCategory.isEmpty) {
       return const Center(
-        child: Text("Sin publicaciones"),
+        child: Text("Sin Productos"),
       );
     }
 
@@ -254,9 +254,9 @@ class _HomePageState extends State<HomePage>
           labelColor: Theme.of(context).colorScheme.inversePrimary,
           unselectedLabelColor: Theme.of(context).colorScheme.primary,
           tabs: const [
-            Tab(text: "Favoritos"),
-            Tab(text: "Placeholder1"),
-            Tab(text: "Placeholder2"),
+            Tab(text: "Productos"),
+            //Tab(text: "Placeholder1"),
+            //Tab(text: "Placeholder2"),
           ],
         ),
 
@@ -283,9 +283,9 @@ class _HomePageState extends State<HomePage>
               controller: _tabController,
               children: [
                 _buildCategoryPosts("Favoritos", state.posts, state.commentCounts),
-                _buildCategoryPosts("Placeholder1", state.posts, state.commentCounts),
-                _buildCategoryPosts(
-                    "Placeholder2", state.posts, state.commentCounts),
+                //_buildCategoryPosts("Placeholder1", state.posts, state.commentCounts),
+                //_buildCategoryPosts(
+                   // "Placeholder2", state.posts, state.commentCounts),
               ],
             );
           }
